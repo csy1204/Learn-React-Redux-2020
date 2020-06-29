@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-let nextTodoId = 0
 
 const todosSlice = createSlice({
     name: 'todos',

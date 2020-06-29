@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Learn React-Redux 2020
 
-## Available Scripts
+> 리액트 리덕스 공부용 프로젝트
 
-In the project directory, you can run:
+국내에서 많은 사람들이 보는 "리액트를 다루는 기술"이나 여러 입문 자료에서 Redux를 다루는 방식이 약간 현재와 맞지 않을 수 있다는 생각이 이 프로젝트를 진행하려 합니다. 
 
-### `yarn start`
+그렇게 생각하게된 이유는 아래와 같습니다.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. 책에서 주로 사용하는 [redux-actions](https://github.com/redux-utilities/redux-actions) 라이브러리는 2019년 2월 이후로 업데이트가 사실상 끊겼고, 2020년 6월 현재 메인테이너를 구하는 상황이다.
+2. Container 컴포넌트 개념은 창시자 조차 이제 권하지 않는다. 이유는 그렇게 나누는 것이 리액트스럽지도 않으며, Hook을 통해 충분히 더 좋은 코드로 구현 가능하다고 한다. ([링크](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)) 
+3. [redux-toolkit](https://github.com/reduxjs/redux-toolkit) 이란 redux팀에서 공식적으로 만든 툴셋이 존재한다. redux-actions의 대부분 기능이 내장되어 있으며 다양한 편의성을 제공한다. 이 글을 쓰는 기준 3시간 전까지도 커밋이 발생하고 있다는 점에서 긍정적이다.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+또한, Redux를 배울 때 처음에 생기는 어려움 중 하나가 코드량도 많아지고 여러가지 고려해야할 것이 많다는 점인데 redux-toolkit이 해당 어려움을 어느정도 완화해줄 수 있다는 생각이 들었습니다.
 
-### `yarn test`
+## 1. Init Project
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+이 프로젝트는 [Redux](https://redux.js.org/)와 [Redux Toolkit](https://redux-toolkit.js.org/) 템플릿을 사용하여, [Create React App](https://github.com/facebook/create-react-app)를 통해 초기 셋팅을 하였습니다.
 
-### `yarn build`
+```bash
+npx create-react-app learn-react-redux --template redux
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+순서
+1. Redux 기존 코드를 사용해 Todo Reducer 만들기
+2. Todolist 만들기
+3. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

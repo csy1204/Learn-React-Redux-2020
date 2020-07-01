@@ -22,11 +22,10 @@ npx create-react-app learn-react-redux --template redux
 
 
 
-
-
-
 순서
 1. Redux 기존 코드를 사용해 Todo Reducer 만들기
 2. Todolist 만들기
-3. 
+3. Redux Toolkit을 이용해 리팩토링
+4. 뉴스 뷰어 만들기
+5. Redux Saga 적용하기
 
